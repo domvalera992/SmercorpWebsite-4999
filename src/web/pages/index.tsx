@@ -91,13 +91,12 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 9l-7-7-7 7v11a2 2 0 002 2h10a2 2 0 002-2V9z"/>
-              </svg>
-            </div>
-            <span className="text-white font-bold text-xl tracking-tight">BuildCraft</span>
+          <a href="#" className="flex items-center">
+            <img 
+              src="./logo.jpeg" 
+              alt="SMERISTIK Construction" 
+              className="h-12 md:h-14 w-auto object-contain"
+            />
           </a>
           
           {/* Desktop Navigation */}
@@ -876,18 +875,17 @@ function Footer() {
         <div className="grid md:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 9l-7-7-7 7v11a2 2 0 002 2h10a2 2 0 002-2V9z"/>
-                </svg>
-              </div>
-              <span className="text-white font-bold text-xl tracking-tight">BuildCraft</span>
+            <div className="flex items-center justify-center md:justify-start mb-6">
+              <img 
+                src="./logo.jpeg" 
+                alt="SMERISTIK Construction" 
+                className="h-20 w-auto object-contain"
+              />
             </div>
-            <p className="text-zinc-400 mb-4 max-w-md">
+            <p className="text-zinc-400 mb-4 max-w-md text-center md:text-left">
               Professional construction services for commercial and residential projects. Licensed, insured, and committed to quality.
             </p>
-            <p className="text-zinc-500 text-sm">License #: ABC123456</p>
+            <p className="text-zinc-500 text-sm text-center md:text-left">License #: ABC123456</p>
           </div>
           
           {/* Quick Links */}
@@ -935,7 +933,7 @@ function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-zinc-500 text-sm">
-            © {new Date().getFullYear()} BuildCraft Construction. All rights reserved.
+            © {new Date().getFullYear()} SMERISTIK Construction. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-zinc-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
