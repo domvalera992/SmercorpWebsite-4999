@@ -699,7 +699,7 @@ function Contact() {
             
             {/* Contact Info */}
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
+              <a href="tel:305-450-5998" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
                 <div className="w-12 h-12 bg-blue-600/10 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -707,11 +707,11 @@ function Contact() {
                 </div>
                 <div>
                   <p className="text-zinc-500 text-sm">Phone</p>
-                  <p className="text-white font-semibold">(555) 123-4567</p>
+                  <p className="text-white font-semibold">305-450-5998</p>
                 </div>
-              </div>
+              </a>
               
-              <div className="flex items-center gap-4">
+              <a href="mailto:Smerlincorp@gmail.com" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
                 <div className="w-12 h-12 bg-blue-600/10 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -719,9 +719,9 @@ function Contact() {
                 </div>
                 <div>
                   <p className="text-zinc-500 text-sm">Email</p>
-                  <p className="text-white font-semibold">info@buildcraft.com</p>
+                  <p className="text-white font-semibold">Smerlincorp@gmail.com</p>
                 </div>
-              </div>
+              </a>
               
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-blue-600/10 rounded-lg flex items-center justify-center">
@@ -904,8 +904,8 @@ function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-3 text-zinc-400">
-              <li>(555) 123-4567</li>
-              <li>info@buildcraft.com</li>
+              <li><a href="tel:305-450-5998" className="hover:text-white transition-colors">305-450-5998</a></li>
+              <li><a href="mailto:Smerlincorp@gmail.com" className="hover:text-white transition-colors">Smerlincorp@gmail.com</a></li>
               <li>Greater Metro Area</li>
             </ul>
             
