@@ -40,7 +40,7 @@ function Hero() {
             We specialize in renovations, build-outs, and structural upgrades for serious property owners.
           </p>
           
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <div className="flex flex-col sm:flex-row gap-4 animate-slide-up-delay-2">
             <a 
               href="#contact" 
@@ -50,12 +50,6 @@ function Hero() {
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
-            <a 
-              href="#projects" 
-              className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-zinc-700 hover:border-zinc-500 text-white font-semibold text-lg rounded-lg transition-all duration-300 hover:bg-zinc-900"
-            >
-              View Our Work
             </a>
           </div>
           
@@ -103,7 +97,6 @@ function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#about" className="text-zinc-400 hover:text-white transition-colors">About</a>
             <a href="#services" className="text-zinc-400 hover:text-white transition-colors">Services</a>
-            <a href="#projects" className="text-zinc-400 hover:text-white transition-colors">Projects</a>
             <a href="#process" className="text-zinc-400 hover:text-white transition-colors">Process</a>
             <a href="#contact" className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all">
               Get Quote
@@ -131,7 +124,6 @@ function Navbar() {
             <div className="flex flex-col gap-4">
               <a href="#about" className="text-zinc-400 hover:text-white transition-colors">About</a>
               <a href="#services" className="text-zinc-400 hover:text-white transition-colors">Services</a>
-              <a href="#projects" className="text-zinc-400 hover:text-white transition-colors">Projects</a>
               <a href="#process" className="text-zinc-400 hover:text-white transition-colors">Process</a>
               <a href="#contact" className="px-5 py-2.5 bg-blue-600 text-white font-medium rounded-lg text-center">
                 Get Quote
@@ -493,120 +485,6 @@ function WhyChooseUs() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ==================== PROJECTS SECTION ====================
-const projects = [
-  {
-    title: "Downtown Office Complex",
-    category: "Commercial Renovation",
-    description: "Complete interior renovation of a 50,000 sq ft office building including new HVAC, electrical upgrades, and modern open-concept workspaces.",
-    timeline: "8 months",
-    scope: "Full gut renovation",
-    image: null
-  },
-  {
-    title: "Luxury Bathroom Remodel",
-    category: "Residential",
-    description: "High-end residential bathroom transformation featuring custom tropical palm wallpaper accent wall, premium tile work, and designer finishes that create a spa-like retreat.",
-    timeline: "3 weeks",
-    scope: "Custom design & finishes",
-    image: "./12859727-6a7a-4bca-85d0-d705daa345d8.jpeg"
-  },
-  {
-    title: "Historic Home Restoration",
-    category: "Residential",
-    description: "Restored a 1920s craftsman home to its original glory with modern amenities hidden behind period-appropriate details.",
-    timeline: "12 months",
-    scope: "Full restoration",
-    image: null
-  },
-  {
-    title: "Restaurant Build-Out",
-    category: "Commercial",
-    description: "Converted raw commercial space into a fully-equipped restaurant with commercial kitchen, bar, and dining areas.",
-    timeline: "5 months",
-    scope: "Complete build-out",
-    image: null
-  }
-];
-
-function Projects() {
-  return (
-    <section id="projects" className="py-24 bg-zinc-950">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-blue-600 font-semibold tracking-wide uppercase mb-4">Our Portfolio</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Recent Projects
-          </h2>
-          <p className="text-zinc-400 text-lg">
-            See the quality and craftsmanship we bring to every project, from commercial renovations to residential builds.
-          </p>
-        </div>
-        
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className="group">
-              {/* Image */}
-              <div className="aspect-[4/3] bg-zinc-900 rounded-xl overflow-hidden relative mb-6 border border-zinc-800 group-hover:border-blue-600/30 transition-colors">
-                {project.image ? (
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                ) : (
-                  <>
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-zinc-900" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-zinc-800 rounded-full flex items-center justify-center">
-                        <svg className="w-8 h-8 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </>
-                )}
-                {/* Category badge */}
-                <div className="absolute top-4 left-4 px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">
-                  {project.category}
-                </div>
-              </div>
-              
-              {/* Content */}
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-600 transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-zinc-400 mb-4">{project.description}</p>
-              <div className="flex gap-6 text-sm">
-                <div>
-                  <span className="text-zinc-500">Timeline:</span>{' '}
-                  <span className="text-white font-medium">{project.timeline}</span>
-                </div>
-                <div>
-                  <span className="text-zinc-500">Scope:</span>{' '}
-                  <span className="text-white font-medium">{project.scope}</span>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        
-        {/* CTA */}
-        <div className="text-center mt-16">
-          <a 
-            href="#contact" 
-            className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg rounded-lg transition-all duration-300"
-          >
-            Start Your Project
-          </a>
         </div>
       </div>
     </section>
@@ -1074,7 +952,6 @@ function Index() {
       <QuickContact />
       <Services />
       <WhyChooseUs />
-      <Projects />
       <Testimonials />
       <Process />
       <Contact />
